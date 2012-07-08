@@ -1,0 +1,29 @@
+<%= form_for @photo, :html => {:multipart => true} do |f| %>
+  <%= f.error_messages %>
+  <%= f.hidden_field :photo_id %>
+  <p>
+    <%= f.label :caption %><br />
+    <%= f.text_field :caption %>
+  </p>
+  <p>
+    <%= f.file_field :image %>
+  </p>
+  <p>
+    <%= f.label :remote_image_url, "or image URL" %><br />
+    <%= f.text_field :remote_image_url %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>
+	
+
+  <!-- <div class="caption">
+   <div class="field">
+     <%=# f.label :caption %><br />
+     <%=# f.text_field :caption %>
+   <%# end %>
+   </div> -->
+ 
+
+
+    
+  	  
